@@ -24,8 +24,14 @@ Well [Bob Sagget](https://www.youtube.com/watch?v=aR7GUiiKEz0&feature=youtu.be&t
 
 - generate *nix services tailored to the target machines init system
   - systemv, upstart, and systemd supported
-  - 
+  -
 ## how
 
 - against my better judgement... pure `bash`
 
+## refs
+
+- [bash minification](http://bash-minifier.appspot.com/)
+- [bash mustache](https://github.com/tests-always-included/mo)
+- [bash-templating](https://github.com/johanhaleby/bash-templater/blob/master/templater.sh)
+- [init system detection](http://unix.stackexchange.com/questions/18209/detect-init-system-using-the-shell)

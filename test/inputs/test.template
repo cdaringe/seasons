@@ -1,0 +1,7 @@
+in the middle of markup?: <h1>{{input1}}</h1>
+nested in markup?: <ul>
+  heres a bunch of crazy characters !@#&^$)@_[]{}\?>,/``{{input2}}^$)@_[]{}\?>
+  how about a BIG SPACE in a string?? _{{input3}}_
+</ul>
+{{^missing}}will show up, because we didn't add a missing clause{{/missing}}
+{{#present}}should definitely show up{{/present}}

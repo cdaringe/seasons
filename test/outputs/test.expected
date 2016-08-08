@@ -1,0 +1,7 @@
+in the middle of markup?: <h1>abc</h1>
+nested in markup?: <ul>
+  heres a bunch of crazy characters !@#&^$)@_[]{}\?>,/``efg123^$)@_[]{}\?>
+  how about a BIG SPACE in a string?? __BIG AR$3 SPACES__
+</ul>
+will show up, because we didn't add a missing clause
+should definitely show up

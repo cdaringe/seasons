@@ -1,0 +1,45 @@
+{
+  "name": "seasons",
+  "version": "1.0.0",
+  "description": "cross platform linux service deployment, made easy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "standard \"src/**/*.js\" \"test/**/*.js\"",
+    "lintfix": "standard-format -w",
+    "validate": "npm ls",
+    "preversion": "git checkout master && git pull && npm ls",
+    "docs": "mkdir -p docs && jsdoc -c .jsdoc.json src/",
+    "deploy-docs": "gh-pages -d docs && rm -rf docs",
+    "postpublish": "npm run docs && npm run deploy-docs",
+    "publish-patch": "npm run preversion && npm version patch && git push origin master --tags && npm publish",
+    "publish-minor": "npm run preversion && npm version minor && git push origin master --tags && npm publish",
+    "publish-major": "npm run preversion && npm version major && git push origin master --tags && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cdaringe/seasons.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cdaringe/seasons/issues"
+  },
+  "homepage": "https://github.com/cdaringe/seasons#readme",
+  "devDependencies": {
+    "gh-pages": "^0.11.0",
+    "jsdoc": "^3.4.0",
+    "minami": "^1.1.1",
+    "nyc": "^7.1.0",
+    "perish": "0.0.3",
+    "shizam": "0.0.5",
+    "standard": "^7.1.2",
+    "standard-format": "^2.2.2",
+    "tape": "^4.6.0"
+  },
+  "pre-commit": [
+    "validate",
+    "lint",
+    "test"
+  ]
+}
