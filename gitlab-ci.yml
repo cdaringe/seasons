@@ -1,0 +1,18 @@
+before_script:
+  - echo "YAHTZEE!"
+
+test:upstart:
+  image: ubuntu:12.04
+  services:
+  - node:6.3.1-slim
+  script:
+  - npm install
+  - echo "I AM OLDBUNTU"
+
+test:systemd:
+  image: fedora:24
+  services:
+  - node:6.3.1-slim
+  script:
+  - npm install
+  - echo "I AM FEDORA"
